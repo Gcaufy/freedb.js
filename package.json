@@ -1,6 +1,6 @@
 {
   "name": "freedb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Key-Value Database based on github.com",
   "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",
