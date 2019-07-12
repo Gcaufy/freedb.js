@@ -156,6 +156,7 @@ export default class KV {
    * await kv.set('mykey', 'append-value');
    */
   set (key: string, value: string): Promise<KeyRecord> {
+    value = '' + value; // to string
     const setkey = this.encrypt ? this.cipher.encode(key) : key;
     const setval = this.encrypt ? this.cipher.encode(value) : value;
     return this.querier.set(setkey, setval).then((res: KeyRecord) => {
